@@ -13,7 +13,6 @@ import MyBookingsPage from './pages/MyBookingsPage';
 import PlacePage from './pages/PlacePage';
 import ReservationConfirmationPage from './pages/ReservationConfirmationPage';
 import BookingContext from './context/BookingContext';
-import BookingPage from './pages/BookingPage';
 import SearchQueryContext  from './context/SearchQueryContext';
 import MyFavoritesPage from './pages/MyFavoritesPage';
 import FavoriteContext from './context/FavoriteContext';
@@ -36,7 +35,6 @@ function App() {
               <Route path="/account" element={<MyProfilePage />} />
               <Route path="/account/places" element={<MyPlacesPage />} />
               <Route path="/account/bookings" element={<MyBookingsPage />} />
-              <Route path="/account/bookings/:id" element={<BookingPage />} />
               <Route path="/account/places/new" element={<PlacesFormPage />} />
               <Route path="/account/places/:id" element={<PlacesFormPage />} />
               <Route path="/account/favorites" element={<MyFavoritesPage />} />

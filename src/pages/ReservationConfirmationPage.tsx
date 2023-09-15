@@ -26,7 +26,7 @@ export default function ReservationConfirmationPage() {
   }, [user]);
 
   async function handleOnSubmit() {
-    const response = await axios.post('/bookings',  {
+    await axios.post('/bookings',  {
       place: bookingData?.place._id,
       name,
       email,
@@ -36,8 +36,7 @@ export default function ReservationConfirmationPage() {
       numberOfGuest: bookingData?.numberOfGuest,
       price: bookingData?.nightPrice,
     });
-    const bookingId = response.data._id
-    setRedirect(`/account/bookings/${bookingId}`);
+    setRedirect(`/account/bookings/`);
   }
 
   if(redirect) {
